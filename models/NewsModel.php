@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 
 /**
- * This is the model class for table "news".
+ * This is the model class for table "news"
  *
  * @property int $id
  * @property string $image
