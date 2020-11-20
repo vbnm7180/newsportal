@@ -2,9 +2,19 @@
 /* @var $this yii\web\View */
 $this->title = 'Все новости';
 ?>
-<h1>news/show-all</h1>
 
-<p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
-</p>
+<?php 
+foreach ($list as $item) { ?>
+<a class="news__item" href="single/<?php echo $item['id'] ?>">
+    <div class="item__header">
+        <?php echo $item['header'] ?>
+    </div>
+    <div class="item__content">
+        <img src="<?php echo $item['image'] ?>" class="item__image">
+        <div class="item__description">
+        <?php echo $item['description'] ?>
+        </div>
+    </div>
+</a>
+
+<?php } ?>

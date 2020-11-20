@@ -1,6 +1,8 @@
 <?php
 
 use yii\helpers\Html;
+use app\assets\AppAsset;
+AppAsset::register($this);
 /* @var $this yii\web\View */
 /* @var $content string */
 ?>
@@ -13,6 +15,7 @@ use yii\helpers\Html;
 	<?= Html::csrfMetaTags() ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?= Html::encode($this->title) ?></title>
+
 	<?php $this->head() ?>
 </head>
 
@@ -24,18 +27,21 @@ use yii\helpers\Html;
 			NewsPortal
 		</div>
 		<nav class="header__nav">
-			<a href="" class="header__all">
+			<a href="/all" class="header__all">
 				Все новости
 			</a>
-			<a href="" class="header__selected">
+			<a href="/selected" class="header__selected">
 				Избранные новости
 			</a>
 		</nav>
 	</header>
+	<div class="news">
+		<div class="news__container">
 
-	<?= $content ?>
+			<?= $content ?>
 
-
+		</div>
+	</div>
 	<footer class="footer">
 		<div class="footer__year">
 			NewsPortal, 2020

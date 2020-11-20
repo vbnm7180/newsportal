@@ -43,6 +43,18 @@ $config = [
             ],
         ],
         'db' => $db,
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
+            'showScriptName' => false,
+            'rules' => [
+                '/' => 'news/show-all',
+                'all' => 'news/show-all',
+                'selected' => 'news/show-selected',
+                'single/<id:\d+>' => 'news/show-single',
+                'defaultRoute' => 'news/show-all'
+            ],
+        ]
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
