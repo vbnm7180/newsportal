@@ -26,6 +26,19 @@ $config = [
             ],
         ],
         'db' => $db,
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'enableStrictParsing' => true,
+            'showScriptName' => false,
+            'rules' => [
+                ['class' => 'yii\rest\UrlRule', [
+                    '/'=>'news/show-all',
+                    'all'=>'news/show-all',
+                    'selected'=>'news/show-selected',
+                    'single/<id::d+>'=>'news/show-single'
+                ]],
+            ],
+        ]
     ],
     'params' => $params,
     /*
