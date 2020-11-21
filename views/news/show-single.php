@@ -4,7 +4,6 @@ $this->title = $info[0]['header'];
 ?>
 
 <div class="news__page">
-    <button class="page__back-btn">Назад</button>
     <div class="page__header">
     <?php echo $info[0]['header'] ?>
     </div>

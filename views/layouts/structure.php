@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use app\assets\AppAsset;
+
 AppAsset::register($this);
 /* @var $this yii\web\View */
 /* @var $content string */
@@ -22,24 +23,26 @@ AppAsset::register($this);
 <body>
 	<?php $this->beginBody() ?>
 
-	<header class="header">
-		<div class="header__logo">
-			NewsPortal
-		</div>
-		<nav class="header__nav">
-			<a href="/all" class="header__all">
-				Все новости
-			</a>
-			<a href="/selected" class="header__selected">
-				Избранные новости
-			</a>
-		</nav>
-	</header>
-	<div class="news">
-		<div class="news__container">
+	<div class="body-wrapper">
+		<header class="header">
+			<div class="header__logo">
+				NewsPortal
+			</div>
+			<nav class="header__nav">
+				<a href="/all" class="header__all">
+					Все новости
+				</a>
+				<a href="/selected" class="header__selected">
+					Избранные новости
+				</a>
+			</nav>
+		</header>
+		<div class="news">
+			<div class="news__container">
 
-			<?= $content ?>
+				<?= $content ?>
 
+			</div>
 		</div>
 	</div>
 	<footer class="footer">
